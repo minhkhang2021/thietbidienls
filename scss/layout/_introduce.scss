@@ -1,15 +1,19 @@
 @use "../abstracts";
 
 .introduce {
-    width: calc(100% - 15px);
+    width: 100%;
     background: var(--background-color);
     border-radius: 6px;
     .introduce-top {
         text-align: center;
         line-height: 1.6;
         font-size: 1.6rem;
-        width: calc(100% - 30px);
         margin-top: 12px;
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            padding: 24px 0px 12px;
+        }
         h2 {
             font-size: 30px;
             font-weight: 700;

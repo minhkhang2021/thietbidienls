@@ -8,9 +8,6 @@
 .header {
     background: var(--background-color);
 }
-.container {
-    background: var(--background-color);
-}
 .sub-header {
     @extend %flexItemCenter;
     justify-content: space-between;
@@ -71,7 +68,7 @@
     &__list {
         @extend %flexItemCenter;
         width: 100wh;
-        justify-content: space-around;
+        justify-content: left;
         background: red;
         font-size: 1.8rem;
         margin: 0;
@@ -84,6 +81,7 @@
         &__details {
             color: #ffffff;
             padding: 10px 30px;
+            border-right: 1px ridge #f15353;
 
             @include abstracts.breakpoint(lg) {
                 padding: 10px;

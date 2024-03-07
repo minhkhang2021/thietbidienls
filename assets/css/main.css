@@ -1224,10 +1224,6 @@ html.dark {
   background: var(--background-color);
 }
 
-.container {
-  background: var(--background-color);
-}
-
 .sub-header {
   justify-content: space-between;
   padding: 8px 12px;
@@ -1279,7 +1275,7 @@ html.dark {
 
 .navbar__list {
   width: 100wh;
-  justify-content: space-around;
+  justify-content: left;
   background: red;
   font-size: 1.8rem;
   margin: 0;
@@ -1292,6 +1288,7 @@ html.dark {
 .navbar__list__details {
   color: #ffffff;
   padding: 10px 30px;
+  border-right: 1px ridge #f15353;
 }
 @media (max-width: 991.98px) {
   .navbar__list__details {
@@ -1428,7 +1425,7 @@ footer {
   }
 }
 .introduce {
-  width: calc(100% - 15px);
+  width: 100%;
   background: var(--background-color);
   border-radius: 6px;
 }
@@ -1436,8 +1433,12 @@ footer {
   text-align: center;
   line-height: 1.6;
   font-size: 1.6rem;
-  width: calc(100% - 30px);
   margin-top: 12px;
+}
+.introduce .introduce-top h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 24px 0px 12px;
 }
 .introduce .introduce-top h2 {
   font-size: 30px;
