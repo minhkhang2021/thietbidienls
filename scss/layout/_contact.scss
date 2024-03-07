@@ -1,0 +1,30 @@
+@use "../abstracts";
+.page--contact {
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 6px 12px;
+    padding-top: 24px;
+
+    @include abstracts.breakpoint(lg) {
+        display: block;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    img {
+        width: 30px;
+        margin-bottom: -8px;
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+    a {
+        font-size: 2.2rem;
+        padding-left: 10px;
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.6rem;
+        }
+    }
+}

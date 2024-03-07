@@ -1,0 +1,109 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--background-color);
+}
+.container {
+    background: var(--background-color);
+}
+.sub-header {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.body-header {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+
+    &__logo {
+        img {
+            display: block;
+            width: 150px;
+            padding: 12px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__contact {
+        @extend %flexItemCenter;
+        justify-content: space-around;
+        min-width: 50%;
+
+        &__details {
+            @extend %flexItemCenter;
+            width: 40%;
+            justify-content: space-around;
+            gap: 6px;
+            &__icon {
+                width: 70px;
+                @include abstracts.breakpoint(md) {
+                    display: none;
+                }
+            }
+            &__call {
+                min-width: 200px;
+                span {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    padding-bottom: 10px;
+                    text-shadow: none;
+                }
+                a {
+                    color: red;
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    &__list {
+        @extend %flexItemCenter;
+        width: 100wh;
+        justify-content: space-around;
+        background: red;
+        font-size: 1.8rem;
+        margin: 0;
+        border-radius: 6px;
+        left: 12px;
+        :hover {
+            font-weight: 700;
+        }
+
+        &__details {
+            color: #ffffff;
+            padding: 10px 30px;
+
+            @include abstracts.breakpoint(lg) {
+                padding: 10px;
+            }
+        }
+
+        :not(.document) {
+            @include abstracts.breakpoint(lg) {
+                font-size: 1.6rem;
+            }
+
+            @include abstracts.breakpoint(md) {
+                display: none;
+            }
+        }
+        @include abstracts.breakpoint(md) {
+            width: 100%;
+        }
+    }
+    @include abstracts.breakpoint(md) {
+        display: grid;
+    }
+}

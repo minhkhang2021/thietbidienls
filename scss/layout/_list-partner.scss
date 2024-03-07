@@ -1,0 +1,25 @@
+@use "../abstracts";
+.body-page__right {
+    justify-content: center;
+    background: var(--background-color);
+    width: 230px;
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+    :hover {
+        font-weight: bold;
+        color: red;
+    }
+    img {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &_h2 {
+        text-align: center;
+        color: var(--text-color);
+        margin-left: -15px;
+    }
+}
