@@ -1,107 +1,135 @@
 @use "../abstracts";
-
-%flexItemCenter {
+%flexItemsCenter {
     display: flex;
     align-items: center;
 }
 
 .header {
-    background: var(--background-color);
+    // position: fixed;
+    z-index: 1;
+    // background: #fff;
+    width: 100%;
+    // @include abstracts.breakpoint(lg) {
+    //     background: #faf9f9;
+    // }
 }
-.sub-header {
-    @extend %flexItemCenter;
-    justify-content: space-between;
-    padding: 8px 12px;
-    border-bottom: 1px solid #ccc;
-}
-
-.body-header {
-    @extend %flexItemCenter;
-    justify-content: space-between;
-
-    &__logo {
-        img {
-            display: block;
-            width: 150px;
-            padding: 12px;
-            margin-left: auto;
-            margin-right: auto;
+//<!-- Cố định head -->
+.sticky {
+    background: #fff;
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    .logo {
+        &__img {
+            width: 70px;
         }
     }
+    .top-bar {
+        padding: 10px 0 10px 0;
+    }
+}
+.top-bar {
+    @extend %flexItemsCenter;
+    padding: 20px 0;
+    gap: 30px;
+    justify-content: space-around;
+    position: relative;
 
-    &__contact {
-        @extend %flexItemCenter;
-        justify-content: space-around;
-        min-width: 50%;
-
-        &__details {
-            @extend %flexItemCenter;
-            width: 40%;
-            justify-content: space-around;
-            gap: 6px;
-            &__icon {
-                width: 70px;
-                @include abstracts.breakpoint(md) {
-                    display: none;
-                }
-            }
-            &__call {
-                min-width: 200px;
-                span {
-                    display: block;
-                    font-weight: 600;
-                    font-size: 1.8rem;
-                    padding-bottom: 10px;
-                    text-shadow: none;
-                }
-                a {
-                    color: red;
-                    font-weight: 700;
-                    font-size: 2.2rem;
-                }
-            }
-        }
+    @include abstracts.breakpoint(lg) {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
 }
 
 .navbar {
+    flex-grow: 1;
+
+    @include abstracts.breakpoint(lg) {
+        order: 4;
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+    }
+
     &__list {
-        @extend %flexItemCenter;
-        width: 100wh;
-        justify-content: left;
-        background: red;
-        font-size: 1.8rem;
-        margin: 0;
-        border-radius: 6px;
-        left: 12px;
-        :hover {
-            font-weight: 700;
-        }
-
-        &__details {
-            color: #ffffff;
-            padding: 10px 30px;
-            border-right: 1px ridge #f15353;
-
-            @include abstracts.breakpoint(lg) {
-                padding: 10px;
-            }
-        }
-
-        :not(.document) {
-            @include abstracts.breakpoint(lg) {
-                font-size: 1.6rem;
-            }
-
-            @include abstracts.breakpoint(md) {
-                display: none;
-            }
-        }
-        @include abstracts.breakpoint(md) {
-            width: 100%;
+        @extend %flexItemsCenter;
+        justify-content: flex-end;
+        @include abstracts.breakpoint(lg) {
+            justify-content: space-around;
+            background: #fff;
+            // opacity: 0.9;
+            // width: 100vw;
         }
     }
-    @include abstracts.breakpoint(md) {
-        display: grid;
+
+    &__item {
+        &:first-child a {
+            padding-left: 0;
+        }
+        &:last-child a {
+            padding-right: 0;
+            border-right: 0;
+        }
+        &:hover .dropdown {
+            display: block;
+        }
+    }
+    &__link {
+        @extend %flexItemsCenter;
+
+        border-right: 1px solid #efefef;
+        padding: 0 10px;
+        height: 50px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        &:hover {
+            color: red;
+            font-weight: 700;
+        }
+        @include abstracts.breakpoint(lg) {
+            border: 0;
+        }
+        @include abstracts.breakpoint(md) {
+            height: 30px;
+        }
+    }
+}
+
+.top-act {
+    @extend %flexItemsCenter;
+    gap: 10px;
+
+    &__btn {
+        @extend %flexItemsCenter;
+        padding: 13px;
+        gap: 10px;
+        background-color: #eee;
+        border-radius: 20%;
+        min-width: 70px;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__user {
+        cursor: pointer;
+    }
+    &__avatar {
+        display: block;
+        width: 55px;
+        border-radius: 20%;
+    }
+}
+.contac-bar {
+    @extend %flexItemsCenter;
+    gap: 10px;
+    &__hotline {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 146.667%;
+        color: red;
     }
 }
