@@ -45,44 +45,79 @@ footer {
     }
 }
 
-@media (min-width: 200px) {
-    .float-contact {
-        position: fixed;
-        bottom: 40px;
-        left: 40px;
+.contact-all-in-on {
+    position: fixed;
+    display: block;
+    align-items: center;
+    bottom: 40px;
+    left: 40px;
+}
+
+.button-contact {
+    ---color-background-zalo: #5092fc;
+    ---color-background-phone: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+    &__border {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        animation: zoom 1.5s ease infinite;
+        background: var(---color-background-zalo);
     }
-    .chat-face,
-    .hotline,
-    .zalo {
+
+    &__item {
+        position: absolute;
+        z-index: 1;
         overflow: hidden;
         display: flex;
         align-items: center;
-        border-radius: 24px;
-        border: 1px solid red;
-        margin-top: 24px;
-        background: red;
-        @include abstracts.breakpoint(lg) {
-            margin-top: 8px;
-        }
+        border-radius: 10%;
 
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 99999;
-            @include abstracts.breakpoint(lg) {
-                width: 20px;
-                height: 20px;
-            }
-        }
-        a {
-            color: #fff;
-            padding: 12px;
-            font-size: 2.4rem;
-            font-weight: 500;
-            @include abstracts.breakpoint(lg) {
-                font-size: 1.8rem;
-                padding: 6px;
-            }
-        }
+        background-color: var(---color-background-zalo);
+        // &:hover .button-contact__content {
+        //     display: block;
+        // }
     }
+
+    &__link {
+        color: #fff;
+    }
+    &__img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10%;
+    }
+    &__content {
+        width: 150px;
+        font-size: 1.4rem;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 20px;
+        display: none;
+    }
+}
+.phone-ct {
+    background: var(---color-background-phone);
+}
+
+@keyframes zoom {
+    0% {
+        scale: 100%;
+        opacity: 0.9;
+    }
+    50% {
+        scale: 150%;
+        opacity: 0.5;
+    }
+    100% {
+        scale: 100%;
+        opacity: 0.9;
+    }
+}
+@include abstracts.breakpoint(sm) {
 }

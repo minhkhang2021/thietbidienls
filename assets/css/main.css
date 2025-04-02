@@ -1466,64 +1466,72 @@ footer {
   font-weight: 400;
 }
 
-@media (min-width: 200px) {
-  .float-contact {
-    position: fixed;
-    bottom: 40px;
-    left: 40px;
-  }
-  .chat-face,
-  .hotline,
-  .zalo {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border-radius: 24px;
-    border: 1px solid red;
-    margin-top: 24px;
-    background: red;
-  }
+.contact-all-in-on {
+  position: fixed;
+  display: block;
+  align-items: center;
+  bottom: 40px;
+  left: 40px;
 }
-@media (min-width: 200px) and (max-width: 991.98px) {
-  .chat-face,
-  .hotline,
-  .zalo {
-    margin-top: 8px;
-  }
+
+.button-contact {
+  ---color-background-zalo: #5092fc;
+  ---color-background-phone: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
 }
-@media (min-width: 200px) {
-  .chat-face img,
-  .hotline img,
-  .zalo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 99999;
-  }
+.button-contact__border {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: zoom 1.5s ease infinite;
+  background: var(---color-background-zalo);
 }
-@media (min-width: 200px) and (max-width: 991.98px) {
-  .chat-face img,
-  .hotline img,
-  .zalo img {
-    width: 20px;
-    height: 20px;
-  }
+.button-contact__item {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 10%;
+  background-color: var(---color-background-zalo);
 }
-@media (min-width: 200px) {
-  .chat-face a,
-  .hotline a,
-  .zalo a {
-    color: #fff;
-    padding: 12px;
-    font-size: 2.4rem;
-    font-weight: 500;
-  }
+.button-contact__link {
+  color: #fff;
 }
-@media (min-width: 200px) and (max-width: 991.98px) {
-  .chat-face a,
-  .hotline a,
-  .zalo a {
-    font-size: 1.8rem;
-    padding: 6px;
+.button-contact__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+}
+.button-contact__content {
+  width: 150px;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 20px;
+  display: none;
+}
+
+.phone-ct {
+  background: var(---color-background-phone);
+}
+
+@keyframes zoom {
+  0% {
+    scale: 100%;
+    opacity: 0.9;
+  }
+  50% {
+    scale: 150%;
+    opacity: 0.5;
+  }
+  100% {
+    scale: 100%;
+    opacity: 0.9;
   }
 }
 .introduce {
