@@ -1301,7 +1301,6 @@ select {
 .header {
   position: fixed;
   z-index: 1;
-  background: #fff;
   width: 100%;
   top: 0;
 }
