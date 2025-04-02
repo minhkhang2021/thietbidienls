@@ -1542,10 +1542,20 @@ footer {
   font-weight: 700;
   padding: 24px 0px 12px;
 }
+@media (max-width: 767.98px) {
+  .introduce .introduce-top h1 {
+    font-size: 32px;
+  }
+}
 .introduce .introduce-top h2 {
   font-size: 30px;
   font-weight: 700;
   padding: 24px 0px 12px;
+}
+@media (max-width: 767.98px) {
+  .introduce .introduce-top h2 {
+    font-size: 24px;
+  }
 }
 .introduce .introduce-top img {
   width: 16px;
