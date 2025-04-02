@@ -11,23 +11,9 @@
 
         <!-- favicon -->
 
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./assets/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
         <link rel="manifest" href="./assets/favicon/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
@@ -42,10 +28,7 @@
         <script src="./assets/js/scripts.js"></script>
 
         <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-FHXV4BLG6R"
-        ></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHXV4BLG6R"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -63,8 +46,7 @@
                 var s1 = document.createElement("script"),
                     s0 = document.getElementsByTagName("script")[0];
                 s1.async = true;
-                s1.src =
-                    "https://embed.tawk.to/6598b5490ff6374032bd1746/1hje889ts";
+                s1.src = "https://embed.tawk.to/6598b5490ff6374032bd1746/1hje889ts";
                 s1.charset = "UTF-8";
                 s1.setAttribute("crossorigin", "*");
                 s0.parentNode.insertBefore(s1, s0);
@@ -100,8 +82,7 @@
 
                         <ol>
                             <li>
-                                <a
-                                    href="/bang-gia-thiet-bi-dien-LS-2024-moi-nhat.html"
+                                <a href="/bang-gia-thiet-bi-dien-LS-2024-moi-nhat.html"
                                     ><h2>Bảng giá Thiết bị điện LS 2024</h2></a
                                 >
                             </li>
@@ -117,15 +98,25 @@
                         <!-- List-partner -->
                         <div id="List-partner" class="List-partner"></div>
                         <script>
-                            load(
-                                "#List-partner",
-                                "/templates/List-partner.html"
-                            );
+                            load("#List-partner", "/templates/List-partner.html");
                         </script>
                     </div>
                 </div>
             </div>
         </main>
+        <!-- Cố định head -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop()) {
+                        $("header").addClass("sticky");
+                    } else {
+                        $("header").removeClass("sticky");
+                    }
+                });
+            });
+        </script>
         <!-- footer -->
         <footer id="footer" class="footer"></footer>
         <script>

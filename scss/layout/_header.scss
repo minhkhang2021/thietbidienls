@@ -5,17 +5,18 @@
 }
 
 .header {
-    // position: fixed;
+    position: fixed;
     z-index: 1;
-    // background: #fff;
+    background: #fff;
     width: 100%;
+    top: 0;
     // @include abstracts.breakpoint(lg) {
     //     background: #faf9f9;
     // }
 }
 //<!-- Cố định head -->
 .sticky {
-    background: #fff;
+    background: #c5b8b8;
     opacity: 1;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     .logo {
