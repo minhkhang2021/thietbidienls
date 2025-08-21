@@ -1,0 +1,212 @@
+@use "../abstracts";
+// Giơi thiệu
+
+// BÀi viết
+.article {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include abstracts.breakpoint(lg) {
+        flex-direction: column;
+    }
+}
+.article-content {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 145%;
+    padding-bottom: 12px;
+    text-indent: 36px;
+    text-align: justify;
+    @include abstracts.breakpoint(lg) {
+        order: 2;
+    }
+    h1 {
+        position: relative;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 145%;
+        padding: 24px 0;
+        margin-bottom: 48px;
+        text-indent: 0px;
+        @include abstracts.breakpoint(xl) {
+            font-size: 2.6rem;
+            padding-bottom: 16px;
+            margin: 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 150px;
+            border-bottom: 3px solid red;
+        }
+        span {
+            font-size: 4rem;
+            color: rgb(255, 0, 0);
+            @include abstracts.breakpoint(xl) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 145%;
+        padding: 24px;
+        @include abstracts.breakpoint(md) {
+            padding-left: 0;
+            text-indent: 0px;
+        }
+    }
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 145%;
+        padding: 12px;
+        @include abstracts.breakpoint(md) {
+            padding-left: 0;
+            text-indent: 0px;
+        }
+    }
+    &__img1 {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin: 24px 0;
+        text-indent: 0px;
+        img {
+            width: 100%;
+        }
+    }
+    &__img2 {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin: 24px 0;
+        text-indent: 0px;
+        img {
+            width: 50%;
+        }
+    }
+    &__img3 {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin: 24px 0;
+        text-indent: 0px;
+        img {
+            width: 25%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        color: #5224f8;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 145%;
+        padding: 6px 12px;
+        text-indent: 0px;
+    }
+    &__keyword {
+        padding: 12px 0;
+        margin-top: 12px;
+        color: #dddddd;
+        font-style: italic;
+        text-decoration: underline;
+        font-size: 1.4rem;
+        line-height: 145%;
+        border-top: 1px solid #dddddd;
+    }
+}
+table {
+    border-collapse: collapse;
+    border-bottom: 1px solid #eee;
+    width: 80%;
+    margin: auto;
+    @include abstracts.breakpoint(xl) {
+        width: 100%;
+        margin-top: 24px;
+    }
+    img {
+        height: 20px;
+    }
+    .btn-download {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        height: 30px;
+        align-items: center;
+        color: blue;
+        text-decoration: underline;
+    }
+}
+th,
+td {
+    border-top: 1px solid #eee;
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+    @include abstracts.breakpoint(md) {
+        font-size: 1.5rem;
+    }
+}
+th {
+    background-color: #faaaaa;
+    font-size: 1.8rem;
+    font-weight: 500;
+    @include abstracts.breakpoint(md) {
+        font-size: 1.5rem;
+    }
+}
+tr:nth-child(even) {
+    background: #eee;
+}
+.col-left {
+    text-align: left;
+}
+/* Nội dung có thể thu gọn */
+.text-collapse__content {
+    max-height: 750px; /* ban đầu chỉ hiện 200px */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
+}
+
+/* Khi mở rộng */
+.text-collapse__content.expanded {
+    max-height: none; /* mở toàn bộ nội dung */
+}
+
+/* Nút xem thêm */
+.text-collapse__toggle {
+    display: block;
+    width: 100%; /* chiếm hết chiều ngang cha */
+    text-align: center;
+    padding: 10px 16px;
+    margin-top: 10px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    background: #f5bebe;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-collapse__toggle:hover {
+    background: #e0e0e0;
+    color: red;
+}
+
+.text-collapse__toggle:active {
+    transform: scale(0.98);
+}

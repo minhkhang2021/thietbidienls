@@ -117,8 +117,10 @@
                 <script>
                     load("#introduce", "/templates/introduce.html");
                 </script>
-                <div class="body-page">
-                    <div class="page-conten">
+                                <div class="article">
+                    <div class="text-collapse">
+                        <div class="text-collapse__content text-collapse__main">
+                    <div class="article-content">
                         <h1>Catalog Thiết bị điện LS Mới nhất</h1>
                         <ol>
                             <li>
@@ -185,7 +187,7 @@
                                 >
                             </li>
                         </ol>
-                        <div class="page-conten__body">
+                        <div class="article-content__body">
                             <ul>
                                 <li>
                                     <h3>
@@ -1465,15 +1467,14 @@
                             load("#contact", "/templates/contact.html");
                         </script>
                     </div>
-
+                        </div>
+                        <button class="text-collapse__toggle">Xem thêm</button>
+                    </div>
                     <div class="body-page__right">
                         <!-- List-partner -->
                         <div id="List-partner" class="List-partner"></div>
                         <script>
-                            load(
-                                "#List-partner",
-                                "/templates/List-partner.html"
-                            );
+                            load("#List-partner", "/templates/List-partner.html");
                         </script>
                     </div>
                 </div>

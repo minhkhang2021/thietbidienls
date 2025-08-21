@@ -6,20 +6,37 @@
     @include abstracts.breakpoint(lg) {
         display: none;
     }
-    :hover {
-        font-weight: bold;
-        color: red;
-    }
-    img {
+
+    a {
         display: block;
-        width: 150px;
-        height: 150px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    &_h2 {
         text-align: center;
+        text-decoration: none;
         color: var(--text-color);
-        margin-left: -15px;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover vào toàn bộ thẻ a */
+        &:hover {
+            background: #fad6d6; /* nền trắng */
+
+            h2 {
+                font-weight: 700;
+                color: red; /* chữ đỏ + in đậm */
+            }
+        }
     }
 }

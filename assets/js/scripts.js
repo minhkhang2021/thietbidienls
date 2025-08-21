@@ -57,3 +57,13 @@ function handleActiveMenu() {
         dropdown.onmouseleave = () => init();
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".text-collapse__toggle");
+    const content = document.querySelector(".text-collapse__content");
+
+    toggleBtn.addEventListener("click", function () {
+        content.classList.toggle("expanded");
+        toggleBtn.textContent = content.classList.contains("expanded") ? "Thu gọn" : "Xem thêm";
+    });
+});
